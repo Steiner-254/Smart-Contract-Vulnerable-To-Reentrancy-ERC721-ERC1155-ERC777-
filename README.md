@@ -9,3 +9,5 @@ Smart Contract Vulnerable To Reentrancy (ERC721, ERC1155, ERC777)
 
 # fix.sol
 ~ In the safeWithdraw function, we have applied the Checks-Effects-Interactions pattern to ensure that state changes are made before any external interaction. This helps prevent reentrancy attacks because the state is updated before the external transfer of the ERC721 token.
+
+~ Various audit tools, such as Slither - https://github.com/crytic/slither, Mythril - https://mythx.io/ and Securify - https://github.com/eth-sri/securify2, can check for the presence of the different types of reentrancy vulnerabilities.
